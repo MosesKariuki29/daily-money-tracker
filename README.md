@@ -239,15 +239,3 @@ Aspiring Software Developer (Fintech & Systems)
 
 ---
 
-# 🔥 Next Step (Important)
-
-After pasting this into `README.md`:
-
-```bash
-git add README.md
-git commit -m "Add professional README documentation"
-git push
-```
-
----
-
