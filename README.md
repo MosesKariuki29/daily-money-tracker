@@ -1,4 +1,3 @@
-
 # 💰 Daily Money Tracker & Savings Insights API
 
 A Django REST API backend for tracking daily income and expenses, analyzing savings performance, and generating financial insights.
@@ -27,6 +26,7 @@ The system is designed with a modular architecture and follows RESTful API princ
 * **Django**
 * **Django REST Framework**
 * **Simple JWT (JWT Authentication)**
+* **django-cors-headers (CORS support)**
 * SQLite (default database)
 
 ---
@@ -42,6 +42,7 @@ daily-money-tracker/
 ├── transactions/  # Income & expense tracking
 ├── dashboard/     # Financial summaries & calculations
 ├── insights/      # AI-style financial recommendations
+├── index.html     # Minimal frontend interface
 └── manage.py
 ```
 
@@ -153,7 +154,7 @@ pip install -r requirements.txt
 Or manually:
 
 ```bash
-pip install django djangorestframework djangorestframework-simplejwt
+pip install django djangorestframework djangorestframework-simplejwt django-cors-headers
 ```
 
 ### 4️⃣ Run Migrations
@@ -173,6 +174,26 @@ Server runs at:
 ```
 http://127.0.0.1:8000/
 ```
+
+---
+
+## 🖥️ Frontend Interface
+
+A minimal HTML/CSS/JS frontend is included (`index.html`) in the project root.
+
+To use it:
+1. Start the Django server (`python manage.py runserver`)
+2. Open `index.html` directly in your browser
+
+### Frontend Features
+
+* User registration and login
+* Dashboard summary (income, expenses, net savings, savings rate)
+* Savings insights display with colour-coded recommendations
+* Transaction management (add, edit, delete)
+* Category spending breakdown with visual bars
+
+> **Note:** CORS is configured to allow all origins (`CORS_ALLOW_ALL_ORIGINS = True`) so the frontend can communicate with the Django backend when opened directly in the browser.
 
 ---
 
@@ -214,13 +235,14 @@ This project demonstrates:
 * ORM aggregation
 * Backend financial logic implementation
 * Secure endpoint protection
+* Minimal frontend integration with a REST API
 * Git version control workflow
 
 ---
 
 ## 🔮 Future Improvements
 
-* Frontend integration (React or Vue)
+* Upgrade frontend to React or Vue
 * Monthly analytics charts
 * AI-powered financial predictions
 * Budget goal tracking
@@ -232,10 +254,7 @@ This project demonstrates:
 
 **Moses Kariuki Mungai**
 Computer Science Student
-Murang’a University of Technology
+Murang'a University of Technology
 Aspiring Software Developer (Fintech & Systems)
 
 ---
-
----
-
